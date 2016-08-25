@@ -32,6 +32,8 @@
 		C482A0121CAEB18D00541D08 /* CropOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA787F1B1B4326F100B6B86E /* CropOverlay.swift */; };
 		C482A0141CAEB1B100541D08 /* CameraView.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA8231371B3BF8F700A837BE /* CameraView.strings */; };
 		C482A0151CAEB1B100541D08 /* CameraViewAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5FA3441B3AFEB300497C62 /* CameraViewAssets.xcassets */; };
+		C484580B1D0AA44400ECDB15 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE097C1CAF1D1A00A8C637 /* UIViewExtensions.swift */; };
+		C484580C1D0AA44400ECDB15 /* CameraViewControllerConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7829B1CB2C04300DE3E63 /* CameraViewControllerConstraint.swift */; };
 		C4D9BA451CA7224B004F70F7 /* PhotoLibraryAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D9BA441CA7224B004F70F7 /* PhotoLibraryAuthorizer.swift */; };
 		C4D9BA471CA73163004F70F7 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D9BA461CA73163004F70F7 /* UIButtonExtensions.swift */; };
 		EBF7829C1CB2C04300DE3E63 /* CameraViewControllerConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF7829B1CB2C04300DE3E63 /* CameraViewControllerConstraint.swift */; };
@@ -265,11 +267,12 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = zero;
 				TargetAttributes = {
 					C4829FFA1CAEB16C00541D08 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 					FAF0583E1B31618D008E5592 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -326,6 +329,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C484580B1D0AA44400ECDB15 /* UIViewExtensions.swift in Sources */,
+				C484580C1D0AA44400ECDB15 /* CameraViewControllerConstraint.swift in Sources */,
 				C482A0031CAEB18D00541D08 /* ImageFetcher.swift in Sources */,
 				C482A0041CAEB18D00541D08 /* SingleImageSaver.swift in Sources */,
 				C482A0051CAEB18D00541D08 /* SingleImageFetcher.swift in Sources */,
@@ -379,6 +384,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -392,6 +398,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zero.CameraViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -401,6 +408,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -413,6 +421,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zero.CameraViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -431,8 +440,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -477,8 +488,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -497,6 +510,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
